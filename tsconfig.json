@@ -4,7 +4,7 @@
         "module": "ESNext",
         "strict": true,
         "rootDir": "chrome-extension",
-        "outDir": "dist",
+        "outDir": "chrome-extension/dist",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "moduleResolution": "Bundler",
@@ -14,6 +14,6 @@
         "chrome-extension/**/*.ts"
     ], // matches your files
     "exclude": [
-        "dist"
+        "chrome-extension/dist"
     ]
 }
