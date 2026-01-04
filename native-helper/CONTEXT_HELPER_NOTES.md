@@ -95,3 +95,10 @@ Debouncing introduces a minimum threshold (e.g., 1 second) before sending a mess
 4. If the user switches apps → reset hasPrinted = false for the new app
 
 With ```hasPrinted``` and debouncing, the helper only sends meaningful messages when the active app actually changes and remains stable. This reduces CPU load, prevents flooding Chrome with redundant messages, minimizes DOM updates, and keeps logs clean.
+
+## References
+
+- NSWorkspace Documentation: Official Apple documentation on querying and interacting with macOS applications: [NSWorkspace Documentation](https://developer.apple.com/documentation/appkit/nsworkspace)
+- Swift Timer Docs - Guide on scheduling repeating or delayed tasks in Swift: [Swift Timer Documentation](https://developer.apple.com/documentation/foundation/timer)
+- RunLoop Guide - Understanding run loops and event processing in macOS apps: [RunLoop Guide](https://developer.apple.com/documentation/foundation/runloop)
+- Chrome Native Messaging – Protocol for communication between native apps and Chrome extensions: [Native Messaging Host Protocol](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-protocol)
