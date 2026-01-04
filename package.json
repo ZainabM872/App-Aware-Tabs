@@ -1,0 +1,23 @@
+{
+  "name": "app-aware-tabs",
+  "version": "1.0.0",
+  "description": "Chrome adapts your tabs based on the macOS app you’re actively using. When apps like VS Code or Figma come into focus, related Chrome tabs are highlighted and prioritized. A lightweight native helper uses macOS APIs to detect app context and sync it to Chrome seamlessly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZainabM872/App-Aware-Tabs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZainabM872/App-Aware-Tabs/issues"
+  },
+  "homepage": "https://github.com/ZainabM872/App-Aware-Tabs#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

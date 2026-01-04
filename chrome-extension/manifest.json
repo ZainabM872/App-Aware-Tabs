@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "App Aware Tabs",
+  "version": "1.0",
+  "description": "Chrome adapts your tabs based on the macOS app you’re actively using.",
+
+  "permissions": [
+  "tabs",
+  "nativeMessaging"
+  ],
+
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}

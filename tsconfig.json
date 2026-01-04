@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "strict": true,
+        "rootDir": "chrome-extension",
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Bundler",
+        "sourceMap": true
+    },
+    "include": [
+        "chrome-extension/**/*.ts"
+    ], // matches your files
+    "exclude": [
+        "dist"
+    ]
+}
