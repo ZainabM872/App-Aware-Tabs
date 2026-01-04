@@ -1,0 +1,9 @@
+{
+  "name": "com.example.contexthelper",  
+  "description": "Send macOS frontmost app to Chrome",
+  "path": "/Users/macbook/Documents/App-Aware-Tabs/native-helper/contextHelper",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://bcoipohfhdnkkajpbednhikpampamnnc/"
+  ]
+}
