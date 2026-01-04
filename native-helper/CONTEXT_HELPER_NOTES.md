@@ -1,0 +1,1 @@
+A file that explains how the helper app works and why code decisions were made
