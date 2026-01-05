@@ -1,21 +1,28 @@
 /// <reference types="chrome"/>
+console.log("Popup script loaded!");
 
-// Establish a persistent connection to the native helper
-// Chrome uses an IPC-like channel under the hood: messages are serialized to JSON and sent via stdin/stdout
-const port = chrome.runtime.connectNative('com.example.contexthelper');
+document.addEventListener('DOMContentLoaded', () => {
 
-const activeAppDiv = document.getElementById('active-app') as HTMLDivElement;
+    // Establish a persistent connection to the native helper
+    // Chrome uses an IPC-like channel under the hood: messages are serialized to JSON and sent via stdin/stdout
+    const port = chrome.runtime.connectNative('com.example.contexthelper');
 
-// Listen for messages from the native helper
-// Each message travels asynchronously over the port; Chrome automatically parses it from JSON to an object
-port.onMessage.addListener((message: { activeApp: string }) => {
-    if (message.activeApp) {
-    activeAppDiv.textContent = message.activeApp;
-  }
-})
+    const activeAppDiv = document.getElementById('active-app') as HTMLDivElement;
 
-// Listen for when the connection to the helper closes
-// This happens if the helper crashes or the extension is unloaded; Chrome fires an event so we can react safely
-port.onDisconnect.addListener(() => {
-  activeAppDiv.textContent = 'Helper disconnected';
+    // Listen for messages from the native helper
+    // Each message travels asynchronously over the port; Chrome automatically parses it from JSON to an object
+    port.onMessage.addListener((message: { activeApp: string }) => {
+        console.log("Received message:", message);
+
+        if (message.activeApp) {
+            activeAppDiv.textContent = message.activeApp;
+        }
+    })
+
+    // Listen for when the connection to the helper closes
+    // This happens if the helper crashes or the extension is unloaded; Chrome fires an event so we can react safely
+    port.onDisconnect.addListener(() => {
+        console.error("Native helper disconnected. Error:", chrome.runtime.lastError);
+        activeAppDiv.textContent = 'Helper disconnected';
+    });
 });
