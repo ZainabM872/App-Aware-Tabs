@@ -12,7 +12,7 @@
     },
     "include": [
         "chrome-extension/**/*.ts"
-, "chrome-extension/popup/popup.ts"    ], // matches your files
+    ], 
     "exclude": [
         "chrome-extension/dist"
     ]
