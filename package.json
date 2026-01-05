@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ZainabM872/App-Aware-Tabs#readme",
   "devDependencies": {
+    "@types/chrome": "^0.1.32",
     "typescript": "^5.9.3"
   }
 }

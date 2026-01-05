@@ -2,7 +2,7 @@
 node_modules/
 
 # TypeScript
-dist/
+chrome-extension/dist
 *.tsbuildinfo
 
 # Logs

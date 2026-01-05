@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Context</title>
+  <link rel="stylesheet" href="popup.css" />
+  <script src="../dist/popup/popup.js"></script> <!--The browser will execute the compiled verson of typescript to javascript-->
+
+</head>
+<body>
+  <div class="popup-container">
+
+    <!-- Active App Section -->
+    <h1>Active App</h1>
+    <div id="active-app" class="active-app-card">Loading...</div>
+
+    <!-- FUTURE: Recent Apps Section: Need to append a timestamp of some sort to the. apps when messages are sent -->
+    <div class="app-history">
+      <h2>Recent Apps</h2>
+      <div class="app-item">VS Code – 3.2s</div>
+      <div class="app-item">Slack – 1.5s</div>
+      <div class="app-item">Chrome – 0.8s</div>
+    </div>
+
+  </div>
+</body>
+</html>
